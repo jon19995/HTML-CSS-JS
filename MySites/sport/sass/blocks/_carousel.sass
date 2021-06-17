@@ -1,0 +1,28 @@
+.carousel
+    padding: 81px 0
+    position: relative
+    &__inner
+        max-width: 750px
+        margin: 0 auto
+        img
+            width: 100%
+    .slick-prev,
+    .slick-next
+        background: none
+        border: none
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        .slick_btn_prev,
+        .slick_btn_next
+            width: 30px
+            height: 30px
+            border-left: 7px solid red
+            border-top: 7px solid red
+            transform: rotate(-45deg)
+    .slick-prev
+        left: -40px
+    .slick-next
+        right: -40px
+        .slick_btn_next
+            transform: rotate(135deg) 
