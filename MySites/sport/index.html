@@ -9,10 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <section class="promo">
+    <section class="promo" id="up">
         <div class="container">
             <header class="header">
                 
@@ -78,7 +79,7 @@
                     
                 </li>
                 <li class="advantage__item">
-                    <img src="logo/advantage_heart.png" alt="Сердце">
+                    <img src="logo/advantage_heart.png" alt="Сердце" class="advantage__heart-beat">
             
                     <h3>Заботимся о здоровье</h3>
                     Мы работаем для того, чтобы<br> Ваши занятия спортом шли на пользу<br>Вашему здоровью и были<br>в радость Вам и Вашим близким!
@@ -120,7 +121,7 @@
     </section>
 
 
-    <section class="carousel">
+    <div class="carousel">
         <div class="container">
             <div class="carousel__inner">
                 <div>
@@ -135,7 +136,7 @@
               </div>
         </div>
         
-    </section>
+    </div>
 
     <section class="catalog">
 
@@ -409,7 +410,8 @@
         <div class="container">
 
             <h2 class="title">отзывы клиентов</h2>
-            <div class="review-item">
+            <div class="review-item animate__animated animate__fadeInUp wow"
+            data-wow-duration="1.3s" data-wow-delay="0.5s">
                 <div class="review-item__photo">
                     <img src="logo/review__photo_1.png" alt="photo">
                 </div>
@@ -420,7 +422,7 @@
                     Спасибо, RunSmart! </p>
                 </div>
             </div>
-            <div class="review-item">
+            <div class="review-item animate__animated animate__fadeInUp wow" data-wow-duration="1.3s" data-wow-delay="0.5s">
                 <div class="review-item__photo">
                     <img src="logo/review__photo_2.png" alt="photo">
                 </div>
@@ -430,7 +432,7 @@
                     <p class="review-item__descr">Крутая штука-пульсометр. Обычно без них бегал. Оказывается только хуже себе делал.<br>Купил пульсометр, ещё в подарок получил тренировку. Со мной вместе провели первую тренировку, научили пользоваться новым гаджетом. Также объяснили основы анатомии, составили план тренировок на месяц вперёд.<br><br>С ними подготовился к своему первому полумарафону! Спасибо!!!</p>
                 </div>
             </div>
-            <div class="review-item">
+            <div class="review-item animate__animated animate__fadeInUp wow" data-wow-duration="1.3s" data-wow-delay="0.5s">
                 <div class="review-item__photo">
                     <img src="logo/review__photo_3.png" alt="photo">
                 </div>
@@ -510,12 +512,16 @@
         </div>
     </div>
 
+    <a class="scroll-top" href="#up">
+        <i  class="fas fa-angle-up"></i>
+    </a>
 
     <script src="https://kit.fontawesome.com/e54a839d53.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
