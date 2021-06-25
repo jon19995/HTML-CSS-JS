@@ -1,41 +1,114 @@
-/*
-Error: Invalid CSS after "...&display=swap')": expected media query list, was ";"
-        on line 1 of C:\Users\zhukov.ev\Desktop\UDEMY\Web_frontEnd\Project\Resume\MySites\Portfolio\sass\style.sass
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
-1: @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
-2: 
-3: *
-4:     font-family: 'Poppins', sans-serif;
-5:     padding: 0
-6:     margin: 0
+.container {
+  width: 1140px;
+  max-width: 100%;
+  margin: 0 auto; }
 
-Backtrace:
-C:\Users\zhukov.ev\Desktop\UDEMY\Web_frontEnd\Project\Resume\MySites\Portfolio\sass\style.sass:1
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:74:in `parse_media_query_list'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:1065:in `parse_import_arg'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:1024:in `block in parse_import_directive'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:1023:in `loop'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:1023:in `parse_import_directive'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:838:in `parse_directive'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:655:in `parse_line'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:540:in `build_tree'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:559:in `block in append_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:558:in `each'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:558:in `append_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:417:in `_to_tree'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
-C:/Program Files (x86)/Koala/bin/sass:22:in `load'
-C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...&display=swap')\": expected media query list, was \";\"\A         on line 1 of C:\Users\zhukov.ev\Desktop\UDEMY\Web_frontEnd\Project\Resume\MySites\Portfolio\sass\style.sass\A \A 1: @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');\A 2: \A 3: *\A 4:     font-family: 'Poppins', sans-serif;\A 5:     padding: 0\A 6:     margin: 0"; }
+.promo {
+  min-height: 100vh;
+  position: relative;
+  background: #9ACEEB;
+  padding-top: 205px; }
+  .promo__btns {
+    margin-top: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 250px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .promo__link {
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    color: #000000; }
+
+.title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 60px;
+  color: #000000;
+  margin-top: 6px; }
+  .title__promo {
+    font-size: 36px;
+    margin-top: 9px; }
+
+.suptitle {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  position: relative;
+  right: -10px;
+  z-index: 10; }
+  .suptitle::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    height: 36px;
+    width: 36px;
+    background: #FFA501;
+    border-radius: 50%;
+    z-index: -1; }
+
+.btn {
+  padding: 12px 26px;
+  color: #000000;
+  background: #FFA501;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  text-transform: none;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px; }
+
+.sidepanel {
+  top: 230px;
+  left: 50px;
+  position: fixed;
+  height: 338px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 5; }
+  .sidepanel__line {
+    width: 2px;
+    height: 70px;
+    background: #000; }
+  .sidepanel__text {
+    height: 150px;
+    width: 25px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px; }
+    .sidepanel__text span {
+      width: 150px;
+      display: block;
+      -webkit-transform: rotate(-90deg) translate(-40%, -265%);
+              transform: rotate(-90deg) translate(-40%, -265%); }
+
+/*# sourceMappingURL=style.css.map */
