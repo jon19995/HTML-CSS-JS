@@ -1,19 +1,73 @@
 .promo
     min-height: 100vh
     position: relative
-    background: #9ACEEB
     padding-top: 205px
+    z-index: 5
+    &::after
+        content: ""
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background: url('../img/Promo__BK.jpg') center (center/cover) no-repeat
+        // filter:  brightness(40%) grayscale(.75) saturate(60%)
+
+    &__items
+        height: 300px
+        
+        justify-content: space-between
+        display: flex
+        flex-direction: column
+        align-items: flex-end   
     &__btns
         margin-top: 25px
         display: flex
         width: 250px
         justify-content: space-between
         align-items:  center
+        z-index: 10
     &__link
         font-weight: bold
         font-size: 14px
         text-decoration: none
         color: $main-color-text
-    
-         
-        
+        z-index: 10
+.hamburger
+    width: 36px
+    height: 21px
+    display: flex
+    align-items: flex-end
+    flex-direction: column
+    justify-content: center
+    position: absolute
+    right: 30px
+    top: 20px
+    cursor: pointer
+    z-index: 10
+    &:hover 
+        & .hamburger
+            &__long
+                background: $main-color
+                &::before,
+                &::after
+                    background: $main-color
+    &__long
+        width: 100%
+        height: 3px
+        background: #fff
+        transition: all .2s linear
+        &::before,
+        &::after
+            content: ""
+            position: absolute
+            width: 30px
+            height: 3px
+            background: #fff
+            right: 0
+            transition: all .2s linear 
+            
+        &::before
+            top: 0
+        &::after
+            bottom: 0       

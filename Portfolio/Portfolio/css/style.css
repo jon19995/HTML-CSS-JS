@@ -196,13 +196,15 @@
   left: 0;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
   overflow: hidden; }
   .overlay__active {
     visibility: visible;
     opacity: 1; }
   .overlay .menu {
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
     left: calc(-100% + 30px);
     height: 100%;
     width: 375px;
