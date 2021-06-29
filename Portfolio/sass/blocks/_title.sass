@@ -2,19 +2,30 @@
     font-weight: bold
     font-size: 36px
     line-height: 60px
-    color: $main-color-text
     margin-top: 6px
     z-index: 10
     position: relative
-    &__promo
+    color: #000
+    @include underline
+    &_promo
         font-size: 36px
         margin-top: 9px
         text-align: right
+        color: $main-color-text
+        &::after
+            display: none
 .suptitle
     font-weight: bold
     font-size: 16px
     line-height: 24px
-    color: $main-color-text
+    padding-left: 12px
     position: relative
     z-index: 10
+    color: #000
     @include before-circle
+    &_promo
+        padding-left: 0
+        color: $main-color-text
+        &::before
+            left: -10px
+        
