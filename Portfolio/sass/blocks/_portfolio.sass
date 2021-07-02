@@ -1,0 +1,23 @@
+.portfolio
+    padding-bottom: 120px
+    &__wrapper
+        margin-top: 85px
+        display: grid
+        list-style-type: none
+        grid-template: repeat(2, 280px) / repeat(4, 280px)
+        gap: 5px
+    &__item
+        &:hover
+            img
+                transform: scale(1.05)
+        img
+            transition: all .6s
+            width: 100%
+            height: 100%
+            object-fit: cover
+.vertical
+    grid-row: 1 / 3
+    grid-column: 4 / 5
+.horizontal
+    grid-row: 2 / 3
+    grid-column: 2 /4
