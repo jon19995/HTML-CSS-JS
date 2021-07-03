@@ -1,0 +1,87 @@
+@media screen and ( max-width: 1440px )
+    .sidepanel
+        display: none
+@media screen and ( max-width: 1200px )
+    .horizontal,
+    .vertical
+        grid-column: unset
+        grid-row: unset
+    .contacts
+        &__wrapper
+            gap: 50px
+
+@media screen and ( max-width: 992px )
+    .contacts
+        &__wrapper
+            grid-template-columns: minmax(320px, 580px)
+            justify-content: center
+        &__img
+            display: none
+
+
+
+
+@media screen and ( max-width: 768px)
+    .about
+        &__wrapper
+            grid-template-columns: repeat(auto-fit, minmax(300px, 768px))
+            grid-template-rows: minmax(200px, 422px) minmax(220px, auto)
+            grid-auto-rows: minmax(200px, auto)
+        &__photo
+            grid-row: 1 / 2
+        &__descr
+            grid-row: 2 / 3
+        &__descr
+            .suptitle
+                text-align: center
+                padding: 0
+                &::before
+                    left: 50%
+            .title
+                text-align: center
+                &::after
+                    left: 50%
+                    transform: translate(-50%, 0)
+        
+    .experience
+        &__items
+            grid-template-columns: repeat(auto-fit, minmax(229px, 1fr))
+            row-gap: 50px
+            align-items: center
+    
+
+
+@media screen and ( max-width: 576px )
+    .title
+        font-size: 30px
+    .promo
+        padding-top: 130px
+        background: url("../img/Promo__BK.jpg") 30%/cover no-repeat
+        &__items
+            align-items: center
+    .suptitle_promo
+        text-shadow: 0px 3px 4px black
+    .title_promo
+        text-shadow: 0px 3px 4px black
+        font-size: 28px
+        text-align: center
+    .overlay
+        .menu
+            max-width: 310px
+            padding-top: 80px
+            .menu__social
+                bottom: 25px
+                width: 180px
+                height: 40px
+                svg
+                    height: 100%
+                    width: 30px
+    .experience 
+        &__wrapper
+            padding: 0 0 0 10px
+    .skills
+        .title
+            font-size: 23px
+    .contacts
+        &__policy
+            order: -1

@@ -126,7 +126,11 @@
             
             <div class="about__wrapper">
                 <div class="about__photo">
-                    <img src="img/about_me-min.jpg" alt="Евгений :)">
+                    <img srcset="img/about_me-min.jpg 700w,
+                    img/about_me.jpg 800w"
+                    sizes="(max-width: 768px) 600px,
+                    (min-width: 769px)  750px" 
+                    src="img/about_me.jpg" alt="Евгений :)">
                 </div>
                 <div class="about__descr">
                     <div class="suptitle suptitle_tal">Про меня</div>
@@ -172,7 +176,7 @@
 
 
     <!-- Мой опыт  -->
-    <section class="experience">
+    <section class="experience"> 
         <div class="container">
             <div class="experience__wrapper">
                 <div class="suptitle">Опыт</div>
@@ -233,10 +237,10 @@
             </div>
         </div>
 
-    </section>
+    </section> 
 
     <!-- Навыки  -->
-    <section class="skills">
+    <section class="skills"> 
         <div class="container">
             <div class="suptitle">Навыки</div>
             <h2 class="title title_und-centr">Что я использую в работе</h2>
@@ -306,7 +310,7 @@
                 </ul>
             </div>
         </div>
-    </section>
+    </section> 
 
 
     <!-- Портфолио -->
@@ -323,11 +327,11 @@
                 <li class="portfolio__item horizontal"><a href="#"><img src="icons/myProject/mac.svg" alt="mac"></a></li>
             </ul>
         </div>
-    </section>
+    </section> 
 
 <!-- Контакты -->
 
-    <section class="contacts">
+    <section class="contacts"> 
         <div class="container">
 
             <div class="contacts__wrapper">
@@ -376,7 +380,7 @@
             </div>
 
         </div>
-    </section>
+    </section> 
 
     <script src="js/script.js"></script>
 </body>
