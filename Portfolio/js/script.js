@@ -23,3 +23,26 @@ const progress = document.querySelectorAll('.progress__status'),
 progress.forEach( (item, i) => {
     lines[i].style.width = item.innerHTML;
 });
+
+// Плавная прокрутка по якорным ссылкам
+
+
+
+
+$("[data-scroll]").on("click", function(event) {
+    event.preventDefault();
+
+    const $this = $(this),
+        blockId = $this.data('scroll');
+        blockOffset = $(blockId).offset().top;
+
+
+    $("html, body").animate({
+        scrollTop: blockOffset
+    }, 500);
+
+
+});
+$(".portfolio__back_not-ready").on("click", function(event) {
+    event.preventDefault();
+});

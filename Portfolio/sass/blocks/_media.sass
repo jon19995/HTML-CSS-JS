@@ -6,6 +6,8 @@
     .vertical
         grid-column: unset
         grid-row: unset
+        width: 280px
+        height: 280px
     .contacts
         &__wrapper
             gap: 50px
@@ -48,10 +50,34 @@
             grid-template-columns: repeat(auto-fit, minmax(229px, 1fr))
             row-gap: 50px
             align-items: center
-    
+    .contacts
+        &__triggers
+            justify-content: center
+        &__policy
+            order: -1
 
 
 @media screen and ( max-width: 576px )
+    .hamburger
+        position: fixed
+        height: 22px
+        // width: 40px
+        background: rgba(0, 0, 0, .7)
+        border-radius: 10px 0px 0 10px
+        &__long
+            background: $main-color
+            height: 4px
+            border-radius: 10px 0px 0 10px
+            &::after
+                height: 4px
+                background: $main-color
+                border-radius: 10px 0px 0 10px
+            &::before
+                height: 4px
+                background: $main-color
+                border-radius: 10px 0px 0 10px
+
+                
     .title
         font-size: 30px
     .promo
@@ -83,5 +109,7 @@
         .title
             font-size: 23px
     .contacts
+        &__triggers
+            justify-content: center
         &__policy
             order: -1
