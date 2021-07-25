@@ -1,0 +1,170 @@
+@media screen and ( max-width:  1200px)
+    .menu_item
+        padding-right: 18px
+    .call
+        font-size: 18px
+    .promo_header
+        font-size: 55px
+        margin-top: 70px
+    .sub_header
+        font-size: 30px
+        margin-top: 54px
+    .promo_text
+        margin: 33px 0 72px 0
+
+
+@media screen and ( max-width:  991px)
+    .menu_item
+        padding-right: 13px
+    .menu_link
+        font-size: 12px
+    .promo_header
+        font-size: 50px
+    .logo_link
+        margin-top: 10px
+    .text_sub_logo_uber
+        font-size: 12px
+        margin: 8px 0
+    .first_section
+        .col-md-2
+            position: relative
+            .call_btn
+                position: absolute
+                top: 50%
+                right: 0
+                transform: translateY(-50%)
+                margin: 0
+    .wrapper_rel
+        flex-direction: column
+        .logo_item
+            position: relative
+            top: 0
+            left: 0
+            transform: none
+            margin-bottom: 15px
+            ~p
+                padding-left: 0
+                text-align: center
+    .mt30
+        .img_item
+            height: 210px
+            p
+                font-size: 16px
+            
+
+@media screen and ( max-width:  767px)
+    .d_none
+        display: none
+    .some_text
+        display: none
+        ~.call
+            display: none
+    .logo_link
+        ~p
+            display: none
+
+    .menu
+        position: absolute
+        top: 0
+        left: -100%
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        height: 100vh
+        width: 40vw
+        min-width: 250px
+        transition: all .4s linear
+        background: rgba(0, 0, 0, 0.8)
+        &_item
+            text-align: center
+            border-right: 0px
+        &_link
+            font-size: 20px
+        &_active
+            left: 0
+    .mt30
+        .img_item
+            height: 210px
+            padding: 54px 11px 34px 11px
+            p
+                font-size: 22px
+    header
+        position: fixed
+        width: 100%
+        top: 0
+        left: 0
+        z-index: 100
+        .burger
+            display: block
+            width: 50px
+            height: 100%
+            position: absolute
+            top: 0
+            right: 10px
+            background: none
+            border: 0
+            z-index: 101
+            .menu_mobile
+                position: absolute
+                top: 50%
+                right: 0
+                transform: translateY(-50%)
+                height: 4px
+                width: 50px
+                background: $color_white
+                &::after,
+                &::before
+                    @include carBg
+                    background: $color_white
+                    height: 4px
+                    transition: all .2s linear
+                &::after
+                    top: 10px
+                    right: 0
+                &::before
+                    top: -10px
+                    right: 0
+            &_active
+                .menu_mobile
+                    background: none
+                    &::before
+                        transform: rotate(-45deg) translateY(13px)
+                    &::after
+                        transform: rotate(45deg) translateY(-14px)
+
+    .first_section
+        margin-top: 50px
+                
+            
+
+
+@media screen and ( max-width:  575px)
+    .logo_uber777
+        width: 100%
+    
+    
+@media screen and ( max-width:  425px)
+    .call_btn
+        width: 155px
+        height: 38px
+    .promo_header
+        font-size: 36px
+        margin-top: 40px
+    .sub_header
+        font-size: 22px
+        margin-top: 35px
+    .title 
+        ~ h2
+            font-size: 30px
+            margin-bottom: 27px
+    .conditions
+        h3
+            font-size: 19px
+            ~ul
+                margin: 15px 0 30px 0
+        
+
+        
+   
+
+    

@@ -273,10 +273,16 @@
       -webkit-transform: rotate(-90deg) translate(-40%, -265%);
               transform: rotate(-90deg) translate(-40%, -265%); }
 
-.telegram svg,
-.gmail svg {
+.telegram img,
+.gmail img {
+  max-width: 100%;
+  max-height: 100%;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg); }
+
+.gmail {
+  height: 20px;
+  width: 20px; }
 
 .overlay {
   z-index: 15;
@@ -714,7 +720,7 @@
   .contacts__form {
     margin-top: 30px;
     display: grid;
-    grid-template: 45px 127px minmax(45px, auto)/repeat(2, auto);
+    grid-template: 45px 127px minmax(45px, auto)/repeat(2, 1fr);
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;

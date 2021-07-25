@@ -1,0 +1,116 @@
+@media screen and ( max-width: 900px  )
+    .header__official
+        display: none
+    .feed-form
+        margin: 36px auto 0
+        max-width: 100% 
+    .consultation,
+    .title_left
+        text-align: center
+        h2
+            font-size: 22px
+        &_descr
+            font-size: 18px
+        
+@media screen and ( max-width: 767px )
+    .container
+        padding: 0 20px
+    .promo
+        &__wrapper
+            align-items: center
+        &__header
+            font-size: 30px
+            line-height: 40px
+            text-align: center
+        &__subheader
+            font-size: 17px
+            line-height: 20px
+            text-align: center
+    .header
+        &__logo
+            margin-right: 30px
+        &__phone
+            font-size: 16px
+            line-height: 16px
+    ul.slick-dots
+            display: flex
+            justify-content: center
+            padding: 0
+            li
+                height: 20px
+                width: 20px
+                border-radius: 50%
+                background: silver
+                list-style-type: none
+                margin: 0 30px
+                &.slick-active
+                    background: $bkButton
+                button
+                    font-size: 0
+                    width: 30px
+                    height: 30px
+                    position: relative
+                    transform: translate(-5px, -8px)
+                    background: none
+                    border: none
+
+@media screen and ( max-width: 700px )
+    .advantage 
+        ul
+            flex-direction: column
+            align-items: center
+            li
+                margin-right: 0
+                max-width: 400px
+
+@media screen and ( max-width: 480px )
+    .modal
+        max-width: 300px
+        &__close
+            right: 0
+    
+
+@media screen and ( max-width: 575px )
+    .review-item
+        flex-direction: column
+        align-items: center
+        &__photo
+            margin: 0 0 10px 0
+        &__descr
+            text-align: center
+    .consultation
+        .title
+            span
+                display: none
+    .catalog
+        &__tab
+            div
+                &:before
+                    transform: skewX(25deg)
+            &:nth-child(1)
+                div::before
+                    content: "Фитнес"
+            &:nth-child(2)
+                div::before
+                    content: "Бег"
+            &:nth-child(3)
+                div::before
+                    content: "Триатлон"                                        
+            span
+                display: none
+@media screen and ( max-width: 425px )
+    .catalog__tabs
+        flex-direction: column
+        li
+            margin: 0 0 10px 0
+            &:last-child
+                margin: 0
+    .footer__adress
+        font-size: 19px
+    
+
+    
+    
+    
+    
+    
