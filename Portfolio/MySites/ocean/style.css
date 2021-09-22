@@ -48,9 +48,8 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -104,7 +103,7 @@ a {
           align-items: center; }
 
 .theme {
-  margin-right: 20px; }
+  margin-right: 50px; }
 
 .burger {
   height: 40px;
@@ -131,5 +130,9 @@ a {
     height: auto; }
   .main__video img, .main__img img {
     mix-blend-mode: screen; }
+
+@media screen and (max-width: 900px) {
+  .theme {
+    margin-right: 20px; } }
 
 /*# sourceMappingURL=style.css.map */
