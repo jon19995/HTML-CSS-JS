@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap')
+
+\:root
+    --black: #000
+    --white: #fff    
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: "Poppins", serif
+
+body
+    background: var(--white)
+    color: var(--black)
+.container
+    max-width: 100%
+    width: 1700px
+    margin: 0 auto
+    padding: 0 20px
+a
+    text-decoration: none
+    color: var(--black)
+.hidden
+    display: none
+
+.btn
+    cursor: pointer
+    height: 30px
+    width: 30px
+    position: relative
+    z-index: 20
+    ion-icon
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+.header
+    margin-top: 50px
+    &__logo
+        z-index: 100
+    &__items
+        display: flex
+        justify-content: space-around
+        align-items: center
+        font-size: 30px
+        position: relative
+    &__navigation
+        display: block
+        position: absolute
+        height: 100vh
+        width: 0
+        left: 0%
+        top: 0
+        background: var(--white)
+        z-index: 10
+        transition: .8s width
+        overflow: hidden
+        ul
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            display: flex
+            flex-direction: column
+            align-items: center
+            li
+                border-radius: 50px
+                list-style: none
+                padding: 5px 20px
+                transition: .7s background
+                cursor: pointer
+                &:hover
+                    background: var(--black)
+                    color: var(--white)
+    
+
+.rightSide
+    display: flex
+    align-items: center
+.theme
+    margin-right: 50px
+.burger
+    height: 40px
+    width: 40px
+    .btn
+        width: 100%
+        height: 100%
+
+.main
+    &__items
+        position: relative
+        max-width: 100%
+        height: calc(100vh - 100px)
+        display: flex
+    &__video,
+    &__img
+        position: absolute
+        width: 100%
+        height: 100%
+        video,
+        img
+            width: 100%
+            height: auto
+        img
+            mix-blend-mode: screen
+@media screen and (max-width: 900px)
+    .theme
+        margin-right: 20px
