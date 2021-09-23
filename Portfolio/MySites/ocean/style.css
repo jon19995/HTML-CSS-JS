@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 :root {
   --black: #000;
-  --white: #fff; }
+  --white: #fff;
+  --modalWhite: rgba(255, 255, 255, 0.5);
+  --modalBlack: rgba(0, 0, 0, 0.5); }
 
 * {
   margin: 0;
@@ -48,51 +50,114 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     font-size: 30px;
     position: relative; }
   .header__navigation {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: absolute;
     height: 100vh;
     width: 0;
     left: 0%;
     top: 0;
-    background: var(--white);
+    background: var(--modalWhite);
     z-index: 10;
     -webkit-transition: 0.8s width;
     transition: 0.8s width;
     overflow: hidden; }
-    .header__navigation ul {
-      position: absolute;
+
+.modal {
+  position: relative;
+  margin-top: 100px;
+  width: 350px;
+  height: 200px; }
+  .modal__back {
+    position: absolute;
+    -webkit-filter: blur(85px);
+            filter: blur(85px);
+    height: 200px;
+    width: 200px; }
+    .modal__back:nth-of-type(1) {
       left: 50%;
+      top: 0;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      background: #00ff00; }
+    .modal__back:nth-of-type(2) {
+      left: 100%;
       top: 50%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; }
-      .header__navigation ul li {
-        border-radius: 50px;
-        list-style: none;
-        padding: 5px 20px;
-        -webkit-transition: 0.7s background;
-        transition: 0.7s background;
-        cursor: pointer; }
-        .header__navigation ul li:hover {
-          background: var(--black);
-          color: var(--white); }
+      background: #e5ff01; }
+    .modal__back:nth-of-type(3) {
+      left: 50%;
+      top: 100%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      background: #03e4ff; }
+    .modal__back:nth-of-type(4) {
+      left: 0%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      background: #ff1ff3; }
+  .modal__front {
+    border-radius: 20px;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    left: -20%;
+    top: -25%;
+    background: var(--modalWhite);
+    overflow: hidden; }
+    .modal__front::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 62%;
+      height: 100%;
+      left: 0;
+      top: 0%;
+      z-index: 1;
+      background: var(--modalWhite);
+      -webkit-transform: skewX(-20deg) translateX(-20%);
+              transform: skewX(-20deg) translateX(-20%); }
+  .modal__contacts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .modal__contacts a i {
+      margin-right: 10px; }
 
 .rightSide {
   display: -webkit-box;
@@ -103,7 +168,7 @@ a {
           align-items: center; }
 
 .theme {
-  margin-right: 50px; }
+  margin-right: 20px; }
 
 .burger {
   height: 40px;
@@ -130,9 +195,5 @@ a {
     height: auto; }
   .main__video img, .main__img img {
     mix-blend-mode: screen; }
-
-@media screen and (max-width: 900px) {
-  .theme {
-    margin-right: 20px; } }
 
 /*# sourceMappingURL=style.css.map */
